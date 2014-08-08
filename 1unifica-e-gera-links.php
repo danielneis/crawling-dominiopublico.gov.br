@@ -1697,8 +1697,8 @@ $a[] = '20676';
 $a = array_unique($a);
 $root = "http://www.dominiopublico.gov.br";
 $url_detalhes = $root.'/pesquisa/DetalheObraForm.do?select_action=&co_obra=';
-$url_download = $root."/pesquisa/DetalheObraDownload.do?select_action=&co_midia=6&co_obra=";
+$url_videos = $root."/pesquisa/DetalheObraDownload.do?select_action=&co_midia=6&co_obra=";
 foreach ($a as $id) {
-    //echo $url_detalhes.$id, "\n";
-    echo 'wget "', $url_download.$id, "' -O ", $id,".mp4 \n";
+    //echo 'wget "', $url_detalhes, $id, '" -O ', $id,".html \n";
+    echo 'wget "', $url_videos, $id, '" -O ', $id,".mp4 \n";
 }
